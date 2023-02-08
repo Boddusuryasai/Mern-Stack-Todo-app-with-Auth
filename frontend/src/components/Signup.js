@@ -69,13 +69,11 @@ export const Signup = () => {
       )}
       <div className="flex flex-col items-center min-h-screen pt-6 sm:justify-center sm:pt-0 ">
         <div>
-        <div>
-          
-          <h3 className="text-4xl font-bold  font-serif text-sky-900">
-           SIGN IN
-          </h3>
-      
-      </div>
+          <div>
+            <h3 className="text-4xl font-bold  text-sky-900">
+              SIGN IN
+            </h3>
+          </div>
         </div>
         <div className="w-full border-blue-500 px-6 py-4 mt-6 overflow-hidden bg-white shadow-md sm:max-w-md sm:rounded-lg ">
           <form onSubmit={handleSubmit}>
@@ -95,9 +93,8 @@ export const Signup = () => {
               </div>
             </div>
             <div className="mt-4">
-             
               <div className="flex flex-col items-start">
-              <input
+                <input
                   type="email"
                   name="email"
                   id="email"
@@ -110,7 +107,6 @@ export const Signup = () => {
               </div>
             </div>
             <div className="mt-4">
-             
               <div className="flex flex-col items-start">
                 <input
                   type="password"
@@ -126,29 +122,26 @@ export const Signup = () => {
             </div>
 
             <div className="flex items-center justify-end mt-4">
-              
               <button
                 type="submit"
-                className="w-full my-3 text-center items-center px-4 py-2  text-xs font-semibold tracking-widest text-white uppercase transition duration-150 ease-in-out bg-sky-900 border border-transparent rounded-md active:bg-sky-600 hover:bg-sky-600 false"
+                className="w-full my-3 text-center items-center bg-gradient-to-r from-sky-500 to-sky-900 px-4 py-2  text-xs font-semibold tracking-widest text-white uppercase transition duration-150 ease-in-out  border border-transparent rounded-md active:bg-sky-600 hover:bg-sky-600 false"
               >
                 SIGN UP
               </button>
             </div>
             <div className="flex items-center justify-between gap-3 mt-4">
-            <Link
+              <Link
                 className="text-sm text-gray-600 underline hover:text-gray-900"
                 to="/login"
               >
                 Already registered?
               </Link>
               <Link to="/login">
-              <button
-                className="w-full my-3 text-center items-center px-4 py-2  text-xs font-semibold tracking-widest text-white uppercase transition duration-150 ease-in-out bg-sky-900 border border-transparent rounded-md active:bg-sky-600 hover:bg-sky-600 false"
-              >
-                LOGIN HERE
-              </button>
+                <button className="w-full my-3 text-center items-center px-4 py-2  text-xs font-semibold tracking-widest text-white uppercase transition duration-150 ease-in-out bg-sky-900 border border-transparent rounded-md active:bg-sky-600 hover:bg-sky-600 false">
+                  LOGIN HERE
+                </button>
               </Link>
-              </div>
+            </div>
           </form>
         </div>
       </div>

@@ -60,7 +60,7 @@ export const Login = () => {
       <div className="flex flex-col items-center min-h-screen pt-6 sm:justify-center sm:pt-0 ">
         <div>
           
-            <h3 className="text-4xl font-bold  font-serif text-sky-900">
+            <h3 className="text-4xl font-bold  text-sky-900">
             Login 
             </h3>
         
@@ -97,7 +97,7 @@ export const Login = () => {
             </div>
               <button
                 type="submit"
-                className="w-full my-3 text-center items-center px-4 py-2  text-xs font-semibold tracking-widest text-white uppercase transition duration-150 ease-in-out bg-sky-900 border border-transparent rounded-md active:bg-sky-600 hover:bg-sky-600 false"
+                className="w-full my-3 text-center items-center px-4 py-2 bg-gradient-to-r from-sky-500 to-sky-900 text-xs font-semibold tracking-widest text-white uppercase transition duration-150 ease-in-out border border-transparent rounded-md active:bg-sky-600 hover:bg-sky-900  false "
               >
                 Login
               </button>
