@@ -1,4 +1,4 @@
-
+import { AiFillDelete , AiFillEdit } from 'react-icons/ai';
 export const TodoList = ({ todos, handleEdit, handleDelete, handleCheck }) => {
   return (
     <section className="text-gray-600 body-font">
@@ -8,7 +8,7 @@ export const TodoList = ({ todos, handleEdit, handleDelete, handleCheck }) => {
             {todos &&
               todos.map((todo) => (
                 <li
-                  className="flex flex-row gap-6 justify-between min-w-[300px] py-2 px-4 mb-3 border bg-sky-900 text-white rounded-3xl"
+                  className="flex flex-row gap-6 justify-between min-w-[300px] py-2 px-4 mb-3 bg-[#155A82] shadow-lg text-white rounded-3xl"
                   key={todo._id}
                 >
                   <div className="round">
@@ -21,20 +21,10 @@ export const TodoList = ({ todos, handleEdit, handleDelete, handleCheck }) => {
                     <label htmlFor={todo._id}></label>
                   </div>
                   {todo.name}
-                  <div>
-                    <button
-                      className="hover:text-green-500 mr-3"
-                      onClick={() => handleEdit(todo)}
-                    >
-                      Edit
-                    </button>
-
-                    <button
-                      className="hover:text-red-500"
-                      onClick={() => handleDelete(todo._id)}
-                    >
-                      Delete
-                    </button>
+                  <div className='flex gap-2 justify-center items-center '>
+                    <AiFillDelete className='hover:text-sky-600' onClick={() => handleDelete(todo._id)}></AiFillDelete>
+                    <AiFillEdit className='hover:text-sky-600' onClick={() => handleEdit(todo)}></AiFillEdit>
+                    
                   </div>
                 </li>
               ))}
