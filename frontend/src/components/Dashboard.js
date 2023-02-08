@@ -38,25 +38,21 @@ function Dashboard() {
     }
   };
   // EDIT
-  const handleEdit = async (todo) => {
+  const handleEdit = async (todo , editValue) => {
     try {
-      const todoName = prompt("Enter your new name");
-     
-
-      if (!todoName) {
-        alert("Please Enter todo name");
-      } else {
+      
+       {
         await axios({
           method: "put",
           url: `/editTodo/${todo._id}`,
           data: {
-            name: todoName,
+            name: editValue,
           },
           headers: { "auth-token": token },
         });
         const updatedTodos = [...todos];
         const index = updatedTodos.findIndex((u) => u._id === todo._id);
-        updatedTodos[index] = { ...updatedTodos[index], name: todoName };
+        updatedTodos[index] = { ...updatedTodos[index], name: editValue };
         setTodos(updatedTodos);
       }
     } catch (error) {
