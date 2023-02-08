@@ -69,86 +69,86 @@ export const Signup = () => {
       )}
       <div className="flex flex-col items-center min-h-screen pt-6 sm:justify-center sm:pt-0 ">
         <div>
-          <Link href="/">
-            <h3 className="text-4xl font-bold text-blue-600 font-serif hover:font-serif">
-              Sign-In
-            </h3>
-          </Link>
+        <div>
+          
+          <h3 className="text-4xl font-bold  font-serif text-sky-900">
+           SIGN IN
+          </h3>
+      
+      </div>
         </div>
         <div className="w-full border-blue-500 px-6 py-4 mt-6 overflow-hidden bg-white shadow-md sm:max-w-md sm:rounded-lg ">
           <form onSubmit={handleSubmit}>
             <div>
-              <label
-                htmlFor="sername"
-                className="block text-sm font-medium text-gray-700 undefined"
-              >
-                Name
-              </label>
               <div className="flex flex-col items-start">
                 <input
                   type="text"
                   id="username"
                   name="username"
                   value={username}
+                  autoComplete="off"
+                  placeholder="Enter User Name"
                   onChange={(event) => setUsername(event.target.value)}
                   required
-                  className="block w-full mt-1 border-gray-300 font-serif rounded-md shadow-sm focus:border-white-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  className="block w-full mt-1 border-gray-300 p-2 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 />
               </div>
             </div>
             <div className="mt-4">
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium text-gray-700 undefined"
-              >
-                Email
-              </label>
+             
               <div className="flex flex-col items-start">
-                <input
+              <input
                   type="email"
                   name="email"
                   id="email"
                   value={email}
+                  placeholder="Email"
+                  autoComplete="off"
                   onChange={(event) => setEmail(event.target.value)}
-                  required
-                  className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  className="block w-full mt-1 border-gray-300 p-2 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 />
               </div>
             </div>
             <div className="mt-4">
-              <label
-                htmlFor="password"
-                className="block text-sm font-medium text-gray-700 undefined"
-              >
-                Password
-              </label>
+             
               <div className="flex flex-col items-start">
                 <input
                   type="password"
                   name="password"
                   id="password"
                   value={password}
+                  placeholder="Password"
                   required
                   onChange={(event) => setPassword(event.target.value)}
-                  className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  className="block w-full mt-1 border-gray-300 p-2 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 />
               </div>
             </div>
 
             <div className="flex items-center justify-end mt-4">
-              <Link
+              
+              <button
+                type="submit"
+                className="w-full my-3 text-center items-center px-4 py-2  text-xs font-semibold tracking-widest text-white uppercase transition duration-150 ease-in-out bg-sky-900 border border-transparent rounded-md active:bg-sky-600 hover:bg-sky-600 false"
+              >
+                SIGN UP
+              </button>
+            </div>
+            <div className="flex items-center justify-between gap-3 mt-4">
+            <Link
                 className="text-sm text-gray-600 underline hover:text-gray-900"
                 to="/login"
               >
                 Already registered?
               </Link>
+              <Link to="/login">
               <button
-                type="submit"
-                className="inline-flex items-center px-4 py-2 ml-4 text-xs font-semibold tracking-widest text-white uppercase transition duration-150 ease-in-out bg-gray-900 border border-transparent rounded-md active:bg-gray-900 false"
+                className="w-full my-3 text-center items-center px-4 py-2  text-xs font-semibold tracking-widest text-white uppercase transition duration-150 ease-in-out bg-sky-900 border border-transparent rounded-md active:bg-sky-600 hover:bg-sky-600 false"
               >
-                Sign-In
+                LOGIN HERE
               </button>
-            </div>
+              </Link>
+              </div>
           </form>
         </div>
       </div>

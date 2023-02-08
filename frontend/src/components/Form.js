@@ -19,7 +19,7 @@ export const Form = ({ addNewTodo }) => {
     if (localStorage.getItem("token")) {
       setIsloggedin(true);
     } else {
-      navigate("/");
+      navigate("/login");
     }
   }, []);
 
