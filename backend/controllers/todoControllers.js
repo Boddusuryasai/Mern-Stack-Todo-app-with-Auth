@@ -8,13 +8,10 @@ exports.home = (req, res) => {
 exports.createTodo = async (req, res) => {
   try {
     const { name } = req.body;
-    // To check all the details
     if (!name) {
       throw new Error("Name  are Required");
     }
     
-    // Inserting into the Database
-
     const todo = await Todo.create({ name,  user:req.user });
     res.status(201).json({
       success: true,
