@@ -13,7 +13,7 @@ export const Form = ({ addNewTodo }) => {
   };
   const logout = () => {
     localStorage.clear();
-    navigate("/");
+    navigate("/login");
   };
 
   useEffect(() => {

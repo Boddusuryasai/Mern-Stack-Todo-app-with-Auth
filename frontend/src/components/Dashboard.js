@@ -101,7 +101,7 @@ function Dashboard() {
   }, []);
 
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex justify-center items-center h-screen font-[Poppins]">
     <div className="flex flex-col  items-center justify-center bg-[#046A91] shadow-2xl w-[400px] mx-auto py-6 rounded-3xl  ">
       <Form addNewTodo={addNewTodo} />
       <TodoList

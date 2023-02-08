@@ -8,7 +8,7 @@ export const TodoList = ({ todos, handleEdit, handleDelete, handleCheck }) => {
             {todos &&
               todos.map((todo) => (
                 <li
-                  className="flex flex-row gap-6 justify-between min-w-[300px] py-2 px-4 mb-3 bg-[#155A82] shadow-lg text-white rounded-3xl"
+                  className="flex flex-row gap-6 justify-between min-w-[300px] py-2 px-4 mb-3 bg-[#155A82] text-white rounded-3xl"
                   key={todo._id}
                 >
                   <div className="round">

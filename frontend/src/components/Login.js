@@ -61,7 +61,7 @@ export const Login = () => {
         <div>
           
             <h3 className="text-4xl font-bold  text-sky-900">
-            Login 
+            LOGIN 
             </h3>
         
         </div>
@@ -99,7 +99,7 @@ export const Login = () => {
                 type="submit"
                 className="w-full my-3 text-center items-center px-4 py-2 bg-gradient-to-r from-sky-500 to-sky-900 text-xs font-semibold tracking-widest text-white uppercase transition duration-150 ease-in-out border border-transparent rounded-md active:bg-sky-600 hover:bg-sky-900  false "
               >
-                Login
+                LOGIN
               </button>
               
               <div className="flex items-center justify-between gap-3 mt-4">
