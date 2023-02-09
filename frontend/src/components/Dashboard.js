@@ -41,8 +41,6 @@ function Dashboard() {
   // EDIT
   const handleEdit = async (todo , editValue) => {
     try {
-      
-       {
         await axios({
           method: "put",
           url: `${BASE_URL}/editTodo/${todo._id}`,
@@ -55,7 +53,6 @@ function Dashboard() {
         const index = updatedTodos.findIndex((u) => u._id === todo._id);
         updatedTodos[index] = { ...updatedTodos[index], name: editValue };
         setTodos(updatedTodos);
-      }
     } catch (error) {
       console.log(error);
     }
@@ -94,7 +91,8 @@ function Dashboard() {
     }
   }
   useEffect(() => {
-    fetchTodos();
+    fetchTodos(); 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
