@@ -34,7 +34,7 @@ export const TodoList = ({ todos, handleEdit, handleDelete, handleCheck }) => {
                     </li>
                   ) : (
                     <li
-                      className="flex flex-row gap-6 justify-between min-w-[300px] py-2 px-4 mb-3 bg-[#155A82] text-white rounded-3xl"
+                      className="flex flex-row gap-6 justify-between min-w-[300px] py-2 px-4 mb-3 bg-[#155A82] text-white rounded-3xl scale-95 shadow-[0px_4px_7px_#29b0ff] hover:scale-100 delay-75"
                       key={todo._id}
                     >
                       <div className="round">
@@ -49,11 +49,11 @@ export const TodoList = ({ todos, handleEdit, handleDelete, handleCheck }) => {
                       {todo.name}
                       <div className="flex gap-2 justify-center items-center ">
                         <AiFillDelete
-                          className="hover:text-sky-600"
+                          className="hover:text-sky-600 text-red-600"
                           onClick={() => handleDelete(todo._id)}
                         ></AiFillDelete>
                         <AiFillEdit
-                          className="hover:text-sky-600"
+                          className="hover:text-sky-600 text-green-500"
                           onClick={() => {
                             setEditId(todo._id);
                             setEditValue(todo.name);

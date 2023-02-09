@@ -77,7 +77,7 @@ export const Login = () => {
                   placeholder="Email"
                   autoComplete="off"
                   onChange={(event) => setEmail(event.target.value)}
-                  className="block w-full mt-1 border-gray-300 p-2 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  className="block w-full mt-1 border-gray-300 p-2 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 />
               </div>
             </div>
@@ -91,7 +91,7 @@ export const Login = () => {
                   placeholder="Password"
                   autoComplete="off"
                   onChange={(event) => setPassword(event.target.value)}
-                  className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-none p-2"
+                  className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-200 focus:ring-opacity-50 p-2"
                 />
               </div>
             </div>
