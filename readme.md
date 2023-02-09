@@ -24,10 +24,10 @@ A MERN stack based web application, where users can register, login, create and 
  ![](./Assets/signup.PNG)
 
 ## LOGIN
- ![](./Assets/login.PNG)
+ ![](./Assets/Login.PNG)
 
  ## Home
- ![](./Assets/home.PNG)
+ ![](./Assets/Home.PNG)
 
 ## Live Link:
 
