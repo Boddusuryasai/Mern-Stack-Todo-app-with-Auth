@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
-
+import { BASE_URL } from "../constants";
 export const Signup = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
@@ -19,7 +19,7 @@ export const Signup = () => {
       password: password,
     };
     axios
-      .post("/signup", data)
+      .post(`${BASE_URL}/signup`, data)
       .then((response) => {
         localStorage.setItem("token", response.data.token);
         navigate("/dashboard");

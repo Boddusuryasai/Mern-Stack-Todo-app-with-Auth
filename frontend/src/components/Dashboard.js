@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Form } from "./Form";
 import { TodoList } from "./TodoList";
 import axios from "axios";
+import { BASE_URL } from "../constants";
 
 function Dashboard() {
   const [todos, setTodos] = useState([]);
@@ -10,7 +11,7 @@ function Dashboard() {
     try {
       const res = await axios({
         method: "post",
-        url: "/createTodo",
+        url: `${BASE_URL}/createTodo`,
         data: {
           name: todoname,
         },
@@ -25,7 +26,7 @@ function Dashboard() {
 
   const fetchTodos = async () => {
     try {
-      const res = await axios.get("/getTodos", {
+      const res = await axios.get(`${BASE_URL}/getTodos`, {
         headers: {
           "content-type": "application/json",
           "auth-token": token,
@@ -44,7 +45,7 @@ function Dashboard() {
        {
         await axios({
           method: "put",
-          url: `/editTodo/${todo._id}`,
+          url: `${BASE_URL}/editTodo/${todo._id}`,
           data: {
             name: editValue,
           },
@@ -62,7 +63,7 @@ function Dashboard() {
 
   // DELETE
   const handleDelete = async (todoId) => {
-    await axios.delete(`/deleteTodo/${todoId}`, {
+    await axios.delete(`${BASE_URL}/deleteTodo/${todoId}`, {
       headers: {
         "content-type": "application/json",
         "auth-token": token,
@@ -78,7 +79,7 @@ function Dashboard() {
     try {
       await axios({
         method: "put",
-        url: `/editTodo/${todo._id}`,
+        url: `${BASE_URL}/editTodo/${todo._id}`,
         data: {
           checked:!todo.checked
         },

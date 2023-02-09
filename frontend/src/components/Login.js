@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import { BASE_URL } from "../constants";
 
 export const Login = () => {
   const [email, setEmail] = useState("");
@@ -17,7 +18,7 @@ export const Login = () => {
       password: password,
     };
     try {
-      const res = await axios.post("/login", data);
+      const res = await axios.post(`${BASE_URL}/login`, data);
       if (res.data.success) {
         localStorage.setItem("token", res.data.token);
         navigate("/dashboard");
