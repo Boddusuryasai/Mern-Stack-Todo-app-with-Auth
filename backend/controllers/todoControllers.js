@@ -2,7 +2,7 @@
 const Todo = require("../models/todoModal");
 
 exports.home = (req, res) => {
-  res.send("Hello  Alpha ");
+  res.send("Hello  Home ");
 };
 
 exports.createTodo = async (req, res) => {
