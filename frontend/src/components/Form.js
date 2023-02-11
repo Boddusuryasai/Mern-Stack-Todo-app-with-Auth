@@ -1,14 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import {AiOutlineLogout} from 'react-icons/ai';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const Form = ({ addNewTodo }) => {
   const [todoName, setTodoName] = useState("");
   const [isloggedin, setIsloggedin] = useState(false);
   const navigate = useNavigate();
+  const notify = () => toast("New Todo Added!");
   const handleSubmit = (event) => {
     event.preventDefault();
-    addNewTodo(todoName);
+    addNewTodo(todoName).then(()=>notify());
+   
     setTodoName("");
   };
   const logout = () => {
@@ -27,6 +31,7 @@ export const Form = ({ addNewTodo }) => {
 
   return (
     <div>
+      <ToastContainer  />
       {isloggedin && (
         <div>
           
