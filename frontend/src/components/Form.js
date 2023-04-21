@@ -56,7 +56,7 @@ export const Form = ({ addNewTodo }) => {
                         id="name"
                         name="name"
                         placeholder="Todo Name"
-                        className="w-full bg-gray-100  shadow-[0px_4px_15px_#29b0ff] placeholder:text-white placeholder:pl-3 bg-opacity-50 rounded-2xl outline-none  focus:border-sky-500 focus:bg-white focus:ring-2 focus:ring-sky-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                        className="w-full bg-gray-100  shadow-[0px_4px_15px_#29b0ff] placeholder:text-white placeholder:pl-3 bg-opacity-50 rounded-2xl outline-none  focus:border-sky-500 focus:bg-white focus:ring-2 focus:ring-sky-200 text-base  text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                         value={todoName}
                         onChange={(event) => setTodoName(event.target.value)}
                       />
