@@ -75,6 +75,10 @@ function Dashboard() {
 
   const handleCheck = async (todo)=>{
     try {
+      const updatedTodos = [...todos];
+      const index = updatedTodos.findIndex((u) => u._id === todo._id);
+      updatedTodos[index] = { ...updatedTodos[index], checked: !todo.checked };
+      setTodos(updatedTodos);
       await axios({
         method: "put",
         url: `${BASE_URL}/editTodo/${todo._id}`,
@@ -83,10 +87,7 @@ function Dashboard() {
         },
         headers: { "auth-token": token },
       });
-      const updatedTodos = [...todos];
-      const index = updatedTodos.findIndex((u) => u._id === todo._id);
-      updatedTodos[index] = { ...updatedTodos[index], checked: !todo.checked };
-      setTodos(updatedTodos);
+     
     } catch (error) {
       
     }
